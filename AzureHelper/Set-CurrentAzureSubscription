@@ -40,4 +40,4 @@ $Subs[$subscriptionNumber] |Select-AzureSubscription -Current
 "Subscription [$($subs[$subscriptionNumber].SubscriptionName)] set as current"
 }
 
-Set-Alias cas SET-CurrentAzureSubscription
+Set-Alias SAS SET-CurrentAzureSubscription
