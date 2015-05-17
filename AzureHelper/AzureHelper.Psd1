@@ -18,7 +18,7 @@ GUID = '57ef425c-7347-4b2a-a101-90577d886e62'
 Author = 'Thomas Lee'
 
 # Company or vendor of this module
-CompanyName = PS Partnership'
+CompanyName = 'PS Partnership'
 
 # Copyright statement for this module
 Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
