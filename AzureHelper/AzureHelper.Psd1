@@ -57,7 +57,7 @@ Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
 # TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-# FormatsToProcess = @()
+FormatsToProcess = @('AzureHelper.Format.Ps1xml')
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()
@@ -81,7 +81,7 @@ AliasesToExport = '*'
 # ModuleList = @()
 
 # List of all files packaged with this module
-FileList = @(AxureHelper.Format.Ps1xml)
+FileList = @('About_AzureHelper.help.txt')
 
 # HelpInfo URI of this module
 # HelpInfoURI = ''
