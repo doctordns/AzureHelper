@@ -60,7 +60,8 @@
         </TableRowEntries>
       </TableControl>
     </View>
-     <View>
+
+    <View>
       <Name>AzureVmEndPoint</Name>
       <ViewSelectedBy>
         <TypeName>Microsoft.WindowsAzure.Commands.ServiceManagement.Model.InputEndpointContext</TypeName>
@@ -80,6 +81,7 @@
           <TableColumnHeader>
              <Label>Protocol</Label>
           </TableColumnHeader>
+
           <TableColumnHeader>
               <Label>VIP</Label>
           </TableColumnHeader>

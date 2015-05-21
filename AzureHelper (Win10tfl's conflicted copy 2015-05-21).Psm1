@@ -5,13 +5,11 @@ Write-Verbose "In Main Module Script of AzureHelper"
 
 # Dot Source module functions
 . .\Set-tflAzureVMSize.ps1            # works
-. .\New-tflHttpVmEndpoint.ps1         # 
-. .\Set-tflCurrentAzureSubscription.ps1
+. .\New-tflHttpVmEndPoint.ps1         # 
+. .\Set-CurrentAzureSubscription.ps1
 
-# Some Aliases
+# Some More Aliases
 Set-Alias gavm Get-AzureVM
-Set-Alias sas  Set-tflCurrentAzureSubscription
-
 
 # more will go here later!
 # All Done
