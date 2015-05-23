@@ -1,4 +1,7 @@
-﻿#0 . What's there now? 
+﻿# Demo - AzureVMs
+# Creates a Unix VM first
+
+#0 . What's there now? 
 Get-AzureVM
 
 # 1. Add Azure Account
