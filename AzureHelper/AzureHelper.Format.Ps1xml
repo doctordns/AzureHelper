@@ -60,5 +60,59 @@
         </TableRowEntries>
       </TableControl>
     </View>
+     <View>
+      <Name>AzureVmEndPoint</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.WindowsAzure.Commands.ServiceManagement.Model.InputEndpointContext</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+      <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+             <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Public Port</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Local Port</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Protocol</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+              <Label>VIP</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+              <Label>Virtual IP Name</Label>
+          </TableColumnHeader>         
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Port</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>LocalPort</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Protocol</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>VIP</PropertyName>
+              </TableColumnItem>              
+              <TableColumnItem>
+                <PropertyName>VirtualIpName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+
+    </View>
   </ViewDefinitions>
 </Configuration>

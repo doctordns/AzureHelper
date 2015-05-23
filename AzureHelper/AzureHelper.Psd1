@@ -6,10 +6,10 @@
 @{
 
 # Script module or binary module file associated with this manifest.
-# RootModule = 'AzureHelper.psm1'
+RootModule = "AzureHelper.psm1"
 
 # Version number of this module.
-ModuleVersion = '0.1'
+ModuleVersion = '0.2'
 
 # ID used to uniquely identify this module
 GUID = '57ef425c-7347-4b2a-a101-90577d886e62'
@@ -24,7 +24,7 @@ CompanyName = 'PS Partnership'
 Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = 'A set of useful Azure Helper Functions, etc'
+Description = 'A set of useful Azure Helper Functions, etc'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
@@ -57,7 +57,7 @@ Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
 # TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-FormatsToProcess = @('AzureHelper.Format.Ps1xml')
+#FormatsToProcess = @('AzureHelper.Format.Ps1xml')
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()
@@ -81,7 +81,7 @@ AliasesToExport = '*'
 # ModuleList = @()
 
 # List of all files packaged with this module
-FileList = @('About_AzureHelper.help.txt')
+FileList = @('AzureHelper.Format.Ps1xml')
 
 # HelpInfo URI of this module
 # HelpInfoURI = ''
