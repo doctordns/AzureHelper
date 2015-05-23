@@ -63,7 +63,7 @@ Description = 'A set of useful Azure Helper Functions, etc'
 # NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = '*'
+# FunctionsToExport = '*'
 
 # Cmdlets to export from this module
 CmdletsToExport = '*'
