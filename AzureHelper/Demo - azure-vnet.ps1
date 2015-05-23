@@ -1,4 +1,7 @@
-﻿# making azure MMVPN
+﻿# Demo AzureVnet - setting up certs
+# needs to be tested
+
+# making azure MMVPN
 
 # Remove old certs
 (Get-ChildItem -Path cert:\CurrentUser\My | where subject -match 'azure') | Remove-Item -ea 0
