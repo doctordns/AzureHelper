@@ -7,7 +7,7 @@ Write-Verbose "In Main Module Script of AzureHelper"
 . $psScriptRoot\Install-tflAzureVmRmCert.ps1        # works
 . $psScriptRoot\New-tflHttpVmEndpoint.ps1           # works
 . $psScriptRoot\New-tflLinuxVM.ps1                  # works
-. $psScriptRoot\New-tflWindowsVM.ps1
+. $psScriptRoot\New-tflWindowsVM.ps1                # works
 . $psScriptRoot\Set-tflAzureVMSize.ps1              # works
 . $psScriptRoot\Set-tflCurrentAzureSubscription.ps1 # works
 . $psScriptRoot\Update-tflAzurePowerShellModule.ps1 # works
@@ -25,7 +25,7 @@ Set-Alias IRC  Install-tflAzureVmRmCert
 
 # Fix Formats
 Update-FormatData -PrependPath $PSScriptRoot\AzureHelper.Format.Ps1xml
-# more will go here later!
+
 # All Done
 
 Write-Verbose 'Completing Azure Helper Initialisation'
