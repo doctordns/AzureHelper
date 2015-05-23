@@ -24,7 +24,7 @@ CompanyName = 'PS Partnership'
 Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = 'A set of useful Azure Helper Functions, etc'
+Description = 'A set of useful Azure Helper Functions, etc'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
@@ -57,7 +57,7 @@ Copyright = '(c) 2015 Thomas Lee. All rights reserved.'
 # TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-FormatsToProcess = @('AzureHelper.Format.Ps1xml')
+#FormatsToProcess = @('AzureHelper.Format.Ps1xml')
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()

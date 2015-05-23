@@ -1,4 +1,4 @@
-﻿Function Install-WinRMAzureVMCert {
+﻿Function Install-tflAzureVmRmCert {
 <#
 .SYNOPSIS
     Downloads and installs the certificate created or initially uploaded
@@ -9,25 +9,23 @@
     this function obtains and installs the certificate into your local machine
     certificate store. Writing to the local host's cert store requires PowerShell
     to run elevated). Once the certificate is installed, you can connect to 
-    Azure VMs using SSL to improve security. 
+    Azure VMs using SSL to improve security.  This function works against the 
+    current Azure subscription, use Set-TflCurrentAzureSubscription or SAS to change it!
 .NOTES
-    File Name  : Install-WinRmAzureVmCert.ps1
+    File Name  : Install-tflAzureVmRmCert.ps1
     Author     : Thomas Lee - tfl@psp.co.uk
     Requires   : PowerShell Version 3.0, Azure module 8.12
     Tested     : PowerShell Version 5
-.PARAMETER SubscriptionName
-    The name of the Azure subscription whose VMs you want to get certificates from. Remember
-    to use quotes around subscription names containing spaces.
+
 .PARAMETER ServiceName
     The name of the Azure cloud service the virtual machine is deployed in.
 .PARAMETER VmName
     The name of the Azure virtual machine to install the certificate for. 
 .EXAMPLE
-    Install-WinRmAzureVMCert -SubscriptionName "my subscription" -ServiceName "mycloudservice" -Name "myvm1" 
+    Install-tflAzureVmRmCert -SubscriptionName "my subscription" -ServiceName "mycloudservice" -Name "myvm1" 
 #>
 [Cmdletbinding()]
 param(
-[string] $SubscriptionName, 
 [string] $CloudServiceName, 
 [string] $VMName)
 
@@ -78,7 +76,7 @@ Write-Verbose "[$($store.location)] [$($store.name)] cert store found sucessfull
 $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
 $store.Add($CertToImport)
 $store.Close()
-Write-Verbose 'Certificate written to store'
+Write-Verbose 'Certificate written to Local Machine Trusted Root Store'
 
 # And nuke the temp file	
 Remove-Item $certTempFile

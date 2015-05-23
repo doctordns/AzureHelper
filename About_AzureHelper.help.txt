@@ -14,14 +14,22 @@ Meta-Files
 1. AzureHelper.PSD1 - this is the module Manaifest with predictible information contained therein.
 2. AzureHelper.PSM1 - this is the main script, called by teh manifest, that runs when you load the module. It does some documentation, dot sources each function file, and creates aliases.
 
-Functions
-Set-tflAzureSubscription - sets a subscription as default.
-New-tflHttpVmEndpoint - sets an HTTP endpoint for a vm in the cloud
-Set-tflAzureVMSize - sets a VM to be in a different size (and restarts VM if not already running).
+Functions (each defined in a separate .ps1 file of same name)
+Set-tflAzureSubscription        - sets a subscription as default.
+New-tflHttpVmEndpoint           - sets an HTTP endpoint for a vm in the cloud
+Set-tflAzureVMSize              - sets a VM to be in a different size (and restarts VM if not already running)
+Update-tflAzurePowerShellModule - Gets Latest Azure PowerShell Module from GitHub (and checks if latest version if loaded)
+Install-tflAzureVmRmCert        - Installs a remote management cert for a VM.
+New-tflLinuxVM                  - Creates a Linux VM and sets SSH endpoint to 22/22
 
-Aliases
-1. SAS  - for Set-AzureSubscription
-2. GAVM - for Get-AzureVM
+Aliases (set in psm1 file)
+* Aliass to Azure Cmdlets
+gavm - Get-AzureVM
+ravm - Remove-AzureVM
+* Aliases to module functions
+sas  - Set-AzureSubscription
+uam  - Update-tflazurePowerShellModule
+irc  - Install-tflAzureVmRmCert
 
 Help Files
 1. About_AzureHelper.help.txt - a help file to import on module load.
