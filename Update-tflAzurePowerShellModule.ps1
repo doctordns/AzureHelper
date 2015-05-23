@@ -60,7 +60,7 @@ If (($AzureModule.Version.ToString() -ne $LatestRelease.name) -or ($AzureModule 
 }
 else
 {
-    Write-Host "Azure Powershell module is up to date."
+    Write-Host "Azure Powershell module is up to date with version [$($AzureModule.Version.ToString())]"
 }
 }
 
