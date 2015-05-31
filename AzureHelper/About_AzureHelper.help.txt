@@ -44,6 +44,8 @@ Format Files
     Returned from: Get-AzureVM.
   . Type         : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.InputEndpointContext
     Returned from: GetAzureEndpoint
+  . Type         : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.StorageServicePropertiesOperationContext
+    Returned from: Get-AzureStorageAccount
 
 Contact
 tfl@psp.co.uk

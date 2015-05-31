@@ -4,7 +4,9 @@ Function New-tflAzureFileShare {
 .SYNOPSIS
     This script creates an Azure File Store in a new Storage Account
 .DESCRIPTION
-    This script first checks to see if the 
+    This script first checks to see if the storage account exists, and
+    if not it creates it.
+
 .NOTES
     File Name  : 
     Author     : Thomas Lee - tfl@psp.co.uk
@@ -23,7 +25,7 @@ $StorageAccountName = 'cookham123',   # must be lower case
 $Share              = 'fileshare',
 $Location           = 'North Europe',
 # Type can be: Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS, Premium_LRS
-$Type               =  'Standard_LRS',
+$Type               =  'Standard_GRS',
 $FileShareName      = 'Cookham123FS'
 )
 
@@ -46,7 +48,6 @@ If (!$ac)  # SA does not exist - so create it
         {Write-Verbose "The name [$StorageAccountName] can not be used - try again"
           return}
 
-
    # SA does not exist, not used elsewhere...
      Write-Verbose "Storage Account [$StorageAccountName] in [$Location] does not exist"
      Write-Verbose "Creating Storage Account [$StorageAccountName] in [$Location]"
@@ -60,13 +61,13 @@ If (!$ac)  # SA does not exist - so create it
   
   # Create the share   
     Write-Verbose "Creating new share [$Share]"
-    $FS = New-AzureStorageShare -Name $Share -Context $Context
-    Write-Verbose "New Share Created"  
+    $Fs = New-AzureStorageShare -Name $Share -Context $Context
+    Write-Verbose "New Share [$share] Created"  
   
   
   # Create a folder
-    New-AzureStorageDirectory -Share $Share -Path testdir
-    Get-AzureStorageFile -Share $s -Path testdir
+    New-AzureStorageDirectory -Share $Fs -Path testdir
+    Get-AzureStorageFile -Share $share -Path testdir
 
   # For future use - persist the creds that created this account locally
     Write-Verbose "Persisting credentials for [$StorageAccountName]"
@@ -84,7 +85,7 @@ Write-Verbose ("Function took [{0}] minutes" -f $($finish-$start).totalminutes.t
 
 
 # test it
-# $testsa = 'share1234'
+# $testsa = 'share1234x'
 # Test-AzureName -storage $testsa
 # $Share              = 'jerry'
 # $Location           = 'North Europe'

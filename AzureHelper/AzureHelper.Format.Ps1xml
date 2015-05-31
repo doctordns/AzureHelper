@@ -60,6 +60,7 @@
         </TableRowEntries>
       </TableControl>
     </View>
+
      <View>
       <Name>AzureVmEndPoint</Name>
       <ViewSelectedBy>
@@ -112,7 +113,57 @@
           </TableRowEntry>
         </TableRowEntries>
       </TableControl>
-
     </View>
-  </ViewDefinitions>
+
+    <View>
+      <Name>AzureStorageAccount</Name>
+      <ViewSelectedBy>
+          <TypeName>Microsoft.WindowsAzure.Commands.ServiceManagement.Model.StorageServicePropertiesOperationContext</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+      <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+             <Label>SA Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Primary status</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Primary Location</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>Secondary Location</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+             <Label>SA Type</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                  <PropertyName>Label</PropertyName>
+               </TableColumnItem>
+               <TableColumnItem>
+                  <PropertyName>StatusOfPrimary</PropertyName>
+               </TableColumnItem>
+               <TableColumnItem>
+                 <PropertyName>GeoPrimaryLocation</PropertyName>
+               </TableColumnItem>
+               <TableColumnItem>
+                 <PropertyName>GeoSecondaryLocation</PropertyName>
+               </TableColumnItem>
+               <TableColumnItem>
+                 <PropertyName>AccountType</PropertyName>
+               </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+
+ </ViewDefinitions>
+
 </Configuration>
