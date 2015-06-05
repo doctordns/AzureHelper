@@ -1,7 +1,8 @@
-AzureHelper
+
+# AzureHelper
 Ths AzureHelper module is a set of useful PowerShell tools for use with Microsoft Azure.
 
-Introduction
+# Introduction
 I use PowerShell with Azure a great deal and have created a number of useful functions etc for dealing with Azure. 
 The functions help me - and you are welcome to use them. 
 
