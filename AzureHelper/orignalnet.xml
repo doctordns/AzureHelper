@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NetworkConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/ServiceHosting/2011/07/NetworkConfiguration">
   <VirtualNetworkConfiguration>
-    <Dns />
+    <Dns>                                            
+      <DnsServers>
+        <DnsServer name="SkyDNS" IPAddress="10.10.2.4"/>
+      </DnsServers>                              
+    </Dns> 
     <LocalNetworkSites>
       <LocalNetworkSite name="CookhamHQ">
         <AddressSpace>
@@ -11,21 +15,20 @@
       </LocalNetworkSite>
     </LocalNetworkSites>
     <VirtualNetworkSites>
+       <VirtualNetworkSite name="CookhamNet" Location="West Europe">
  
-      <VirtualNetworkSite name="CookhamNet" Location="West Europe">
+         <AddressSpace>
+            <AddressPrefix>10.10.2.0/24</AddressPrefix>
+         </AddressSpace>
  
-        <AddressSpace>
-          <AddressPrefix>10.10.2.0/24</AddressPrefix>
-        </AddressSpace>
- 
-        <Subnets>
-          <Subnet name="Skynet">
-            <AddressPrefix>10.10.2.0/25</AddressPrefix>
-          </Subnet>
-          <Subnet name="GatewaySubnet">
-            <AddressPrefix>10.10.2.128/29</AddressPrefix>
-          </Subnet>
-        </Subnets>
+         <Subnets>
+           <Subnet name="Skynet">
+             <AddressPrefix>10.10.2.0/25</AddressPrefix>
+           </Subnet>
+           <Subnet name="GatewaySubnet">
+             <AddressPrefix>10.10.2.128/29</AddressPrefix>
+           </Subnet>
+         </Subnets>
  
         <Gateway>
           <VPNClientAddressPool>
@@ -37,7 +40,6 @@
               <Connection type="IPsec" />
             </LocalNetworkSiteRef>
           </ConnectionsToLocalNetwork>
-
         </Gateway>
       </VirtualNetworkSite>
     </VirtualNetworkSites>

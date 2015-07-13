@@ -27,7 +27,7 @@ $Imgnm = $Img.ImageName
 Write-Verbose "Choosing image [$imgnm]"
 
 # OK - do it and create the VM
-write-Verbose 'Creating new VM - may take some time'
+Write-Verbose 'Creating new VM - may take some time'
 New-AzureVMConfig -Name $VmName -Instance $VmInstanceSize -Image $Imgnm | 
   Add-AzureProvisioningConfig -Windows -AdminUser $VmUserName -Pass $VmPassword |
     New-AzureVM -ServiceName 'psh1' -Location $vmlocation -WaitForBoot
@@ -65,9 +65,6 @@ $Finish = Get-Date
 Write-Verbose "Finished at [$finish]"
 
 Write-Verbose "Total time: [$(($finish - $start).totalminutes)] minutes"
-
-
-
 }
 
 # Demo and test
